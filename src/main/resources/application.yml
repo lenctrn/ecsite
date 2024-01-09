@@ -1,0 +1,27 @@
+spring:
+  thymeleaf:
+    cache: false
+  jmx:
+    enabled: false
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url:  jdbc:mysql://localhost:3306/ecdb?serverTimezone=Asia/Tokyo
+    username: root
+    Password: root
+mybatis:
+  configuration:
+    mapUnderscoreToCamelCase: true
+  mapper-locations:
+    - classpath*:/jp/co/internous/ecsite/model/mapper/**/*.xml
+#SQLを記述するxmlファイルの配置場所↑
+logging:
+  level:
+    org:
+      springframework: WARN
+    jp:
+      co:
+        internous:
+          ecsite:
+            model: 
+              mapper: DEBUG
+# エラーや不具合の解決に役立つログをコンソールに出力する。
